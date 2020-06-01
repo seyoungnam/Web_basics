@@ -1,0 +1,42 @@
+h1 {
+    color: red;
+}
+p {
+    color: green;
+}
+li {
+    /* change default list style */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
+    list-style-type: "\1F44D"; 
+}
+li.special,  
+span.special {
+    color: orange;
+    font-weight: bold;
+}
+/* li 안에 있는 em element의 스타일을 바꾸고 싶을때 */
+li em {
+    color: rebeccapurple;
+}
+/* h1 element 바로 밑에 있는 p element만 style 적용하고 플 때 */
+h1 + p {
+    font-size: 200%;
+  }
+/* unvisited link : pink */
+a:link {
+    color: pink;
+}
+/* visited link : green */
+a:visited {
+    color: green;
+}
+/* when the user hovers over the link */
+a:hover {
+    text-decoration: none;
+}
+/* combine multiple types together */
+body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+  }

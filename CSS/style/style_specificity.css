@@ -1,0 +1,11 @@
+.special {
+    color: red;
+} 
+p {
+    color: blue;
+}
+
+/* 위 두 selector들은 <p class="special">에 적용되어 적용 대상 HTML element가 같다.
+1. 일반적으로는 later styles가 우선. 이를 cascade 원칙이라 부름(위에서는 p)
+2. 하지만 class가 element보다 specificity에서 앞서기 때문에 위 예제에서는 .special이 적용됨 */
+

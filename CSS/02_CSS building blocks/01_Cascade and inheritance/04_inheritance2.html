@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>04_inheritance2</title>
+    <style>
+        /* .main 아래에 있는 tag들은 전부 .main selector에 지정된 style 적용 */
+      .main {
+        color: rebeccapurple;
+        border: 2px solid #ccc;
+        padding: 1em; 
+      }
+      /* .special 아래에 있는 tag들은 .main style보다 우선적으로 .special style이 적용 */
+      .special {
+        color: black;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main-heading">This is my heading.</h1>
+    <ul class="main">
+        <li>Item One</li>
+        <li>Item Two
+            <ul>
+                <li>2.1</li>
+                <li>2.2</li>
+            </ul>
+        </li>
+        <li>Item Three
+            <ul class="special">
+                <li>3.1
+                    <ul>
+                        <li>3.1.1</li>
+                        <li>3.1.2</li>
+                    </ul>
+                </li>
+                <li>3.2</li>
+            </ul>
+        </li>
+    </ul>
+  </body>
+</html>

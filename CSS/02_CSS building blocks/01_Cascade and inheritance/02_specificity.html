@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>02_specificity</title>
+    <style>
+        /* h1이 아래에 위치하더라도 .main-heading이 더 specify하기 때문에 .main-heading이 적용 */
+      .main-heading {
+        color: red;
+      }
+
+      h1 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main-heading">This is my heading.</h1>
+    <p>This is my paragraph.</p>
+  </body>
+</html>

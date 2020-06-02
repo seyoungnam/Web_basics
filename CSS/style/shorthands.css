@@ -1,0 +1,18 @@
+
+h1 {
+    padding: 10px 15px 15px 5px;
+    background: skyblue url(../media/examples/python.jpg) 5px 5px repeat-x fixed;
+}
+.box {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+
+    background-color: skyblue;
+    background-image: url(../media/examples/python.jpg);
+    background-position: 5px 5px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+/* .box와 h1의 properties와 values는 같음, h1처럼 짧게 쓰는 것을 shorthands라 부름 */

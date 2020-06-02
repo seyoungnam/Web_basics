@@ -1,0 +1,9 @@
+body {
+    background-color: pink;
+}
+/* width가 50em 이상일 때만 body 바탕화면 색을 skyblue로 지정 */
+@media (min-width: 50em) {
+    body {
+        background-color: skyblue;
+    }
+}

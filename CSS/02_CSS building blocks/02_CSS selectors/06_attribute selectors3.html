@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>06_attribute selectors3</title>
+    <style>
+      li[class^="a"] {
+        /* case-sensitive! only match Item 1 */
+          background-color: yellow;
+      }
+
+      li[class^="a" i] {
+        /* i is the case-insensitive flag, match Item 1,2,3 */
+          color: red;
+      }
+    </style>
+  </head>
+    <h1>Case-insensitivity</h1>
+    <ul>
+        <li class="a">Item 1</li>
+        <li class="A">Item 2</li>
+        <li class="Ab">Item 3</li>
+    </ul>
+  </body>
+</html>

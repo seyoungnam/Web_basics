@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>03_target an element</title>
+    <style>
+      /* multiple class명명 가능, css properties에는 .class명을 띄어쓰기 없이 붙여써야 함  */
+      .notebox {
+        border: 4px solid #666;
+        padding: .5em;
+      }
+
+      .notebox.warning {
+        border-color: orange;
+        font-weight: bold;
+      }
+
+      .notebox.danger {
+        border-color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notebox">
+        This is an informational note.
+    </div>
+    
+    <div class="notebox warning">
+        This note shows a warning.
+    </div>
+    
+    <div class="notebox danger">
+        This note shows danger!
+    </div>
+    
+    <div class="danger">
+        This won't get styled — it also needs to have the notebox class
+    </div>
+  </body>
+</html>

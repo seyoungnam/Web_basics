@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>10_combinator</title>
+    <style>
+.box p {
+  /* descendant combinator: .box 아래에 있는 p element는 모두 match */
+    color: red;
+}
+
+ul > li {
+  /* child combinator: ul 바로 아래에 있는 li만 match(두번째 li는 match 안됨)  */
+    border-top: 5px solid red;
+}  
+
+h1 + p {
+  /* adjacent sibling combinator: parent-child 관계는 아니지만 h1 바로 밑에 있는 p element를 match */
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+
+h2 ~ p {
+  /* geleral sibling combinator: +는 바로 밑 element만 적용되나 ~는 바로 밑이 아니어도 h2 아래에 있는 모든 p에 적용 */
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+    
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Text in .box</p>
+      <p>Text in .box2</p>
+      
+    </div>
+    <p>Text not in .box</p>
+
+    <ul>
+        <li>Unordered item</li>
+        <li>Unordered item
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ol>
+        </li>
+    </ul>
+
+    <article>
+        <h1>A heading</h1>
+        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+                melon azuki bean garlic.</p>
+    
+        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+                greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+    </article>
+
+    <article>
+        <h2>A heading</h2>
+        <p>I am a paragraph.</p>
+        <div>I am a div</div>
+        <p>I am another paragraph.</p>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>01_universal selector</title>
+    <style>
+      /* *(universal selector)는 "모든"을 뜻함. p element 아래 모든 first-child에 대해 style 적용 */
+      p *:first-child {
+          color: purple;
+          background-color: yellow;
+          border: 2px solid darkblue;
+      }   
+    </style>
+  </head>
+  <body>
+    <h1>Universal selector</h1>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis <span>kohlrabi welsh onion</span> daikon amaranth tatsoi tomatillo
+        melon azuki bean garlic.</p>
+    
+    <p>Gumbo beet greens corn soko <strong>endive</strong> gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard
+        greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+  </body>
+</html>

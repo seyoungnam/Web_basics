@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>05_attribute selectors2</title>
+    <style>
+      
+      li[class^="a"] {
+        /* a로 시작하는 class명은 전부 포함: match Item1, 2 */
+          font-size: 200%;
+      }
+      
+      li[class$="a"] {
+        /* a로 끝나는 class명은 모두 포함: match Item1, 3 */
+          background-color: yellow;
+      }
+
+      li[class*="a"] {
+        /* class명 중 a가 들어가는 것은 모두 포함: match Item 1,2,3,4 */
+          color: red;
+      }
+    </style>
+  </head>
+    <h1>Attribute substring matching selectors</h1>
+    <ul>
+        <li class="a">Item 1</li>
+        <li class="ab">Item 2</li>
+        <li class="bca">Item 3</li>
+        <li class="bcabc">Item 4</li>
+    </ul>
+  </body>
+</html>

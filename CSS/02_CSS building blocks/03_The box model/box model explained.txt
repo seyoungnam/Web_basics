@@ -1,0 +1,44 @@
+1. Block and inline boxes
+    CSS에서 box는 크게 block과 inline 타입으로 나뉨.
+    만약 box가 block 타입이라면,
+        - box는 새 라인에서 입력됨
+        - box는 inline 방향으로 container안에서 공간을 최대한 채움
+        - width와 height로 크기 정함
+        - padding, border, margin을 적용하면 width, height 바깥쪽으로 적용되어, 다른 elements가 밀리게 됨
+        - h1과 p element는 "display: inline"으로 설정하지 않는 이상 block이 default로 적용됨
+
+    만약 box가 inline 타입이라면, 
+        - box는 새 라인으로 입력되지 않음
+        - width와 height는 적용되지 않음
+        - 세로 padding, border, margin은 적용되나 주변 다른 inline box들이 밀리지는 않음
+        - 가로 padding, border, margin은 적용되며, 주변 다른 inline box들이 밀림
+        - a, span, em, strong 등이 inline이 default로 적용된 element들임
+
+2. Aside: Inner and outer display types
+    위에서 설명한 block과 inline 타입은 box의 바깥쪽에 적용되는 outer display 타입에 대한 설명
+    inner display 타입은 box 내에서 element들이 어떻게 laid out되는지를 결정
+    inner display 타입을 수정할 때는 "display: flex;" 사용
+
+3. What is the CSS box model?
+    CSS box model은 block box에 적용됨. inline box에는 몇몇 behavior만 적용됨
+    Parts of a box
+        - Content box: content가 표시되는 곳, width와 height으로 사이즈 조정
+        - Padding box: content 주변 white space로서 적용, padding으로 사이즈 조정
+        - Border box: content와 padding을 감싸는 부분, border로 사이즈 조정
+        - Margin box: 가장 바깥 layer로 content, padding and border를 whitespace로 감쌈, margin으로 조정
+
+    The standard CSS box model
+        - 기본 width와 height에 padding+border가 더해지는 방식
+        - box size는 width(or height)+padding+border까지 이며 margin을 포함하진 않음
+
+    The alternative CSS box model
+        - standard box model에서는 한눈에 box size를 알기 어려운 문제점 존재
+        - alternative model에서는 width와 height으로 box size를 정한 다음, padding과 border는 box 안쪽을 갉아 먹으면서 정해짐
+        - alternatvie model 쓰고 싶다면 "box-sizing: border-box;"를 추가하면 됨
+        - html 전체에 alternative model을 적용하고 싶다면 아래와 같이 사용
+        html {
+        box-sizing: border-box;
+        }
+        *, *::before, *::after {
+        box-sizing: inherit;
+        }

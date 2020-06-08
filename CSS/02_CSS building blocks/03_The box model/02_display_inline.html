@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>02_display_inline</title>
+    <style>
+      p, 
+      ul {
+        border: 2px solid rebeccapurple;
+      }
+
+      span,
+      li {
+        /* span은 기본적으로 inline style이어서 inline내에서 스타일이 적용됨(새 라인으로 적용되지 않음) */
+        border: 2px solid blue;
+      }
+
+      ul {
+        /* ul에 display: inline-flex 적용하면 flex 아이템(li) 주변으로 inline box 스타일이 타이트하게 적용(display: flex;로 바꿔볼 것) */
+        display: inline-flex;
+        list-style: none;
+        padding: 0;
+      } 
+
+      .inline {
+        /* display: inline 적용시 ul 라인과 같은 라인에 이어서 배치됨 */
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+        I am a paragraph. Some of the
+        <span>words</span> have been wrapped in a
+        <span>span element</span>.
+    </p>     
+    <ul>
+      <li>Item One</li>
+      <li>Item Two</li>
+      <li>Item Three</li>
+    </ul>
+    <p class="inline">I am a paragraph. A short one.</p>
+    <p class="inline">I am another paragraph. Also a short one.</p>
+  </body>
+</html>

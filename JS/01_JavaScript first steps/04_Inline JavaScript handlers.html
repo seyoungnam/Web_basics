@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply JavaScript example</title>
+    <script>
+      function createParagraph() {
+        let para = document.createElement('p');
+        para.textContent = 'You clicked the button!';
+        document.body.appendChild(para);
+      }      
+    </script>
+  </head>
+  <body>
+    <!-- 이 방식 권장하지 않음 -->
+    <button onclick="createParagraph()">Click me</button>
+  </body>
+</html>

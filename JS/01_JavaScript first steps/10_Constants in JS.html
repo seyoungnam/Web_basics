@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>10_Constants in JS</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>f12를 눌러 try에 기입되어 있는 문구를 입력하여 작동하는지 확인하세요.</p>
+</body>
+
+<script>
+  // const는 let과 거의 같다. 단, 저장된 value는 절대 변하지 않는 특징 존재
+  const daysInWeek = 7;
+  const hoursInDay = 24;
+
+  daysInWeek = 8; //에러 발생, const는 value를 바꿀 수 없음
+</script>
+</html>
+

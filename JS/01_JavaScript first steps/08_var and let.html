@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>What is a variable</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>f12를 눌러 logName() function이 작동하는지 확인하세요.</p>
+</body>
+
+<script>
+  // 1. var는 declare전 initialize를 먼저 해도 문제없이 작동
+  myName = 'Chris';
+
+  function logName() {
+    console.log(myName);
+  }
+
+  logName();
+
+  var myName;
+
+  // 반면 let은 declare->initialize 순서를 지켜야 함
+  yourName = 'Bob';
+
+  function logName2() {
+    console.log(yourName);
+  }
+
+  logName2();
+
+  let yourName;
+
+  // 2. var는 같은 variable을 중복으로 만드는 것이 가능
+  var name = 'Chris';
+  var name = 'Bob';
+  // 하지만 let은 중복 variable을 허용치 않음
+  let hisName = 'Chris';
+  let hisName = 'Bob';
+  // 결론: var 대신 let을 사용할 것을 추천
+</script>
+</html>
+
